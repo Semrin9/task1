@@ -49,10 +49,19 @@ const JobsList = () => {
 
 const JobsListWrapper = styled.div`
     display: flex;
-
     .job {
         padding: 1rem 0;
         border-bottom: 1px solid #e5e5e5;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            h5 {
+                font-size: 1.2rem;
+            }
+        }
     }
 
     .company-logo {
@@ -60,12 +69,19 @@ const JobsListWrapper = styled.div`
             width: 110px;
             height: 110px;
             border-radius: 1.5rem;
+            @media (max-width: 767px) {
+                width: 90px;
+                height: 90px;
+            }
         }
     }
 
     .job-details {
         width: 100%;
         gap: 1.2rem;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     .job-description {
@@ -73,6 +89,12 @@ const JobsListWrapper = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         gap: 0.5rem;
+        @media (max-width: 767px) {
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
     }
 
     .job-status {
@@ -85,6 +107,12 @@ const JobsListWrapper = styled.div`
         gap: 1rem;
         flex-wrap: wrap;
         font-size: 1.3rem;
+        @media (max-width: 767px) {
+            justify-content: center;
+            h5 {
+                font-size: 1.1rem;
+            }
+        }
     }
 
     .skill {
@@ -94,17 +122,22 @@ const JobsListWrapper = styled.div`
         border: 1px solid #e5e5e5;
         border-radius: 1rem;
         background: var(--clr-light-secondary);
-
     }
 
     .open {
         color: #00b074;
         font-weight: 600;
+        @media (max-width: 767px) {
+            margin-top: 1.5rem;
+        }
     }
 
     .closed {
         color: #f44336;
         font-weight: 600;
+        @media (max-width: 767px) {
+            margin-top: 1rem;
+        }
     }
 
 `;
